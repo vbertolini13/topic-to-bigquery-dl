@@ -1,7 +1,7 @@
 ## Update Streaming Dataflow
 
-//Ejectuar
+# Ejectuar
 java -jar topic-to-bigquery-dl.jar --project=[id de proyecto] --zone=us-central1-a --streaming=true --runner=DataflowRunner --numWorkers=1 --workerMachineType=n1-standard-1
 
-//Update
+# Update
 java -jar topic-to-bigquery-dl.jar --project=[id de proyecto] --zone=us-central1-a --streaming=true --runner=DataflowRunner --numWorkers=1 --workerMachineType=n1-standard-1 --jobName=[nombre de la ejecucion anterior] --update
