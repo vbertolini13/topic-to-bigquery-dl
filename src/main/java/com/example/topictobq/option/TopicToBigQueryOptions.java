@@ -7,19 +7,14 @@ import org.apache.beam.sdk.options.PipelineOptions;
 public interface TopicToBigQueryOptions extends PipelineOptions {
     
     @Description("Input subscriptions topic")
-    @Default.String("projects/civil-medley-236513/subscriptions/sub-one")
+    @Default.String("projects/civil-medley-236513/subscriptions/prueba")
     String getInputSubscription();
     void setInputSubscription(String value);
 
-    @Description("Name dataset of bigquery.")
-    @Default.String("poc_dataset")
-    String getDataset();
-    void setDataset(String value);
-    
-    @Description("Name table of bigquery.")
-    @Default.String("subscription")
-    String getTable();
-    void setTable(String value);
+    @Description("Output bq in gcp dataset.table")
+    @Default.String("leagueoflegends.champion_bans")
+    String getTableStagingFileLines();
+    void setTableStagingFileLines(String value);
     
     @Description("Id project.")
     @Default.String("civil-medley-236513")
